@@ -4,7 +4,6 @@ import { DeviseReducer } from "./Devise.model";
 const initialState: DeviseReducer = {
   amountIn: 0,
   amountOut: 0,
-  deviseIn: "EUR",
   deviseOut: "USD",
 };
 
@@ -24,12 +23,6 @@ export const deviseSlice = createSlice({
         amountOut: action.payload,
       };
     },
-    SET_DEVISE_IN(state, action) {
-      return {
-        ...state,
-        deviseIn: action.payload,
-      };
-    },
     SET_DEVISE_OUT(state, action) {
       return {
         ...state,
@@ -39,7 +32,7 @@ export const deviseSlice = createSlice({
   },
 });
 
-export const { SET_AMOUNT_IN, SET_AMOUNT_OUT, SET_DEVISE_IN, SET_DEVISE_OUT } =
+export const { SET_AMOUNT_IN, SET_AMOUNT_OUT, SET_DEVISE_OUT } =
   deviseSlice.actions;
 
 export const deviseReducer = deviseSlice.reducer;
