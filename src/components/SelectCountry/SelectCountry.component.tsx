@@ -9,9 +9,9 @@ export interface IExternaProps {
   handelChange: (currentId : string ) => void
 }
 
-interface Tprops extends IReduxSelectCountry, IExternaProps {}
+interface Iprops extends IReduxSelectCountry, IExternaProps {}
 
-const SelectCountry: React.FC<Tprops> = ({ allCountries, handelChange }) => {
+const SelectCountry: React.FC<Iprops> = ({ allCountries, handelChange }) => {
   
   const selectRef =  useRef<HTMLSelectElement>(null)
 
