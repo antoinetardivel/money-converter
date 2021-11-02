@@ -3,7 +3,8 @@ import { CountriesReducer } from "./Countries.model";
 
 const initialState: CountriesReducer = {
   allCountries : [],
-  selectedCountry : 'AFN' 
+  selectedCountryIn : 'AFN',
+  selectedCountryOut : 'AFN' 
 };
 
 export const deviseSlice = createSlice({
@@ -16,16 +17,22 @@ export const deviseSlice = createSlice({
         allCountries: action.payload,
       };
     },
-    SET_SELECTED_COUNTRY(state, action) {
+    SET_SELECTED_COUNTRY_IN(state, action) {
       return {
         ...state,
-        selectedCountry: action.payload,
+        selectedCountryIn: action.payload,
+      };
+    },
+    SET_SELECTED_COUNTRY_OUT(state, action) {
+      return {
+        ...state,
+        selectedCountryOut: action.payload,
       };
     },
   },
 });
 
-export const { SET_COUNTRIES, SET_SELECTED_COUNTRY } =
+export const { SET_COUNTRIES, SET_SELECTED_COUNTRY_OUT, SET_SELECTED_COUNTRY_IN} =
   deviseSlice.actions;
 
 export const countriesReducer = deviseSlice.reducer;

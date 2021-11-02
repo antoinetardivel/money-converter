@@ -1,6 +1,7 @@
 export interface CountriesReducer {
   allCountries: Country[],
-  selectedCountry: string
+  selectedCountryIn: string,
+  selectedCountryOut: string
 }
 
 export interface Country {
