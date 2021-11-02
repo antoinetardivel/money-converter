@@ -1,13 +1,14 @@
 export interface IReduxResult {
-  amountOut: number;
+  amountOut: number,
+  symbolOut: string
 }
 
 export interface IExternaProps {}
 
 interface Tprops extends IReduxResult, IExternaProps {}
 
-const Result: React.FC<Tprops> = ({ amountOut }) => {
-  return <div>Résultat : {amountOut}</div>;
+const Result: React.FC<Tprops> = ({ amountOut, symbolOut }) => {
+  return <p>Résultat : {amountOut} {symbolOut}</p>;
 };
 
 export default Result;
