@@ -22,7 +22,8 @@ export const getCountries = async () => {
 export const getCoef = async () => {
   const deviseOut = store.getState().countriesReducer.selectedCountryOut
   const deviseIn = store.getState().countriesReducer.selectedCountryIn
-
+  // console.log(`IN: ${deviseIn}, OUT: ${deviseOut}`);
+  
   try {
     let res = await fetch(`https://free.currconv.com/api/v7/convert?q=${deviseIn}_${deviseOut}&compact=ultra&apiKey=${process.env.REACT_APP_API_KEY}`)
     if (res.ok) {

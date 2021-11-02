@@ -4,7 +4,7 @@ import "./App.css";
 import Result from "./components/Result";
 import SelectCountry from "./components/SelectCountry";
 import { initCountries } from "./store/countries/Countries.action";
-import { SET_SELECTED_COUNTRY_OUT } from "./store/countries/Countries.reducers";
+import { SET_SELECTED_COUNTRY_OUT, SET_SELECTED_COUNTRY_IN } from "./store/countries/Countries.reducers";
 import { convert } from "./store/devise/Devise.action";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
 
   const handelCountryInChange = (currentId : string) => {
     // console.log(`IN : ${currentId}`);
-    dispatch(SET_SELECTED_COUNTRY_OUT(currentId))
+    dispatch(SET_SELECTED_COUNTRY_IN(currentId))
   }
 
   const handelCountryOutChange = (currentId : string) => {
