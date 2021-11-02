@@ -21,7 +21,7 @@ const SelectCountry: React.FC<Iprops> = ({ allCountries, handelChange }) => {
         handelChange(selectRef.current.value)
       }
     }} ref={selectRef}>
-      {allCountries.map((country, i) => {
+      {allCountries?.map((country, i) => {
         return(<option value={country.currencyId} key={i}>{country.currencyName}</option>)
       })}
     </select>
