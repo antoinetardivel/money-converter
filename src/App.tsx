@@ -16,7 +16,7 @@ function App() {
   const getSymbol = (currentId : string) => {
     let countryS = ''
     
-    store.getState().countriesReducer.allCountries.map((country) => {
+    store.getState().countriesReducer.allCountries?.map((country) => {
       if (country.currencyId === currentId) {
         countryS = country.currencySymbol
       }
